@@ -244,7 +244,7 @@ const WalletPopUp = ({ walletToggle, wallet }) => {
 
   const validarUsuario = (e) => {
 
-    fetch('http://localhost:9000/api/users/' + formData.id.toLocaleUpperCase(), {
+    fetch('http://ec2-52-14-120-83.us-east-2.compute.amazonaws.com/api/users/' + formData.id.toLocaleUpperCase(), {
       method: 'GET',
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
@@ -281,7 +281,7 @@ const WalletPopUp = ({ walletToggle, wallet }) => {
 
     // recaptchaRef.current.reset();
     formData.tipo = tipoLogin;
-    fetch('http://localhost:9000/api/users', {
+    fetch('http://ec2-52-14-120-83.us-east-2.compute.amazonaws.com/api/users', {
       method: 'POST',
       body: JSON.stringify(formData),
       headers: {
@@ -350,7 +350,7 @@ const WalletPopUp = ({ walletToggle, wallet }) => {
     formData.tipo = tipoLogin;
     console.log(formData);
 
-    fetch('http://localhost:9000/api/users', {
+    fetch('http://ec2-52-14-120-83.us-east-2.compute.amazonaws.com/api/users', {
       method: 'POST',
       body: JSON.stringify(formData),
       headers: {
