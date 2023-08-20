@@ -38,6 +38,7 @@ const KEY_CAPTCHA = '6LdBR58mAAAAAB8HaSEfrxLTvs_QUU0n40tEajss';
 //         6LdBR58mAAAAAMxBPDm-yQTK-7g_1LgcaNPMCKtC
 
 
+
 // useEffect (() =>{
 //   const start = () => {
 //     gapi.auth2.init({
@@ -47,10 +48,12 @@ const KEY_CAPTCHA = '6LdBR58mAAAAAB8HaSEfrxLTvs_QUU0n40tEajss';
 //   gapi.load("client:auth2", start)
 // },[]);
 //npm install react-google-recaptcha --force
-
-
+ 
 
 const WalletPopUp = ({ walletToggle, wallet }) => {
+  const API_URL = 'http://18.189.33.125/';
+  //const API_URL = 'http://ec2-52-14-120-83.us-east-2.compute.amazonaws.com';
+
   const [walletAddress, setWalletAddress] = useState('');
   const recaptchaRef = React.createRef();
   const captchaRef = useRef(null);
@@ -248,7 +251,7 @@ const WalletPopUp = ({ walletToggle, wallet }) => {
 
   const validarUsuario = (e) => {
 
-    fetch('http://ec2-52-14-120-83.us-east-2.compute.amazonaws.com/api/users/' + formData.id.toLocaleUpperCase(), {
+    fetch( API_URL+'/api/users/' + formData.id.toLocaleUpperCase(), {
       method: 'GET',
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
@@ -285,7 +288,7 @@ const WalletPopUp = ({ walletToggle, wallet }) => {
 
     // recaptchaRef.current.reset();
     formData.tipo = tipoLogin;
-    fetch('http://ec2-52-14-120-83.us-east-2.compute.amazonaws.com/api/users', {
+    fetch(API_URL+'/api/users', {
       method: 'POST',
       body: JSON.stringify(formData),
       headers: {
@@ -354,7 +357,7 @@ const WalletPopUp = ({ walletToggle, wallet }) => {
     formData.tipo = tipoLogin;
     console.log(formData);
 
-    fetch('http://ec2-52-14-120-83.us-east-2.compute.amazonaws.com/api/users', {
+    fetch(API_URL+'/api/users', {
       method: 'POST',
       body: JSON.stringify(formData),
       headers: {
