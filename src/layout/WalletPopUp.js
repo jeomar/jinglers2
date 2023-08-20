@@ -215,7 +215,9 @@ const WalletPopUp = ({ walletToggle, wallet }) => {
   const handleClick = () => {
     let _frase = Bip39.generateMnemonic();
     setFrase(_frase);
-    navigator.clipboard.writeText(_frase);
+    if (window.isSecureContext && navigator.clipboard) {
+      navigator.clipboard.writeText(_frase);
+    }
     setbtnGenVisible(false);
     setfrmVisible(true);
   };
@@ -230,8 +232,10 @@ const WalletPopUp = ({ walletToggle, wallet }) => {
   };
 
   const handleCopyClick = () => {
-    navigator.clipboard.writeText(frase);
-    alert('Texto copiado al portapapeles');
+    if (window.isSecureContext && navigator.clipboard) {
+      navigator.clipboard.writeText(frase);
+      alert('Texto copiado al portapapeles');
+    }
   };
 
 
@@ -513,7 +517,9 @@ const WalletPopUp = ({ walletToggle, wallet }) => {
                      
                         <p>
                           <textarea value={frase} readOnly style={textareaStyles} />
-                          <button onClick={handleCopyClick}>Copiar</button>
+                          { window.isSecureContext &&( 
+                              <button onClick={handleCopyClick}>Copiar</button>
+                          )}
                         </p>
                     </div>
 
