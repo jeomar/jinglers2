@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { useEffect } from "react";
 import { connect } from "react-redux";
-import { navigationToggle, walletToggle, semillaToggle } from "../redux/actions/siteSettings";
+import { navigationToggle, walletToggle } from "../redux/actions/siteSettings";
 import { stickyNav } from "../utilits";
 
-const Header = ({ walletToggle, navigationToggle }) => { 
+const Header = ({ walletToggle, navigationToggle }) => {
   useEffect(() => {
     stickyNav();
   }, []);
@@ -70,7 +70,6 @@ const Header = ({ walletToggle, navigationToggle }) => {
             >
               <span>SIGN IN</span>
             </a>
-            
           </div>
         </div>
       </div>
@@ -80,6 +79,6 @@ const Header = ({ walletToggle, navigationToggle }) => {
 
 const mapStateToProps = (state) => ({});
 
-export default connect(mapStateToProps, { walletToggle, navigationToggle, semillaToggle })(
+export default connect(mapStateToProps, { walletToggle, navigationToggle })(
   Header
 );

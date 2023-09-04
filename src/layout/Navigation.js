@@ -67,78 +67,13 @@ const Navigation = ({ navigation, navigationToggle }) => {
                     e.preventDefault();
                     setSubMenu("home");
                   }}
-                  className={`${subMenu == "home" ? "active" : ""}`}
+                  className={`${subMenu == "home"}`}
                 >
                   <span className="creative_link">
                     Home
                     <img src="/svg/down.svg" alt="" className="fn__svg" />
                   </span>
                 </a>
-                <ul className="sub-menu">
-                  <li>
-                    <a
-                      href="#"
-                      className="prev"
-                      onClick={() => setSubMenu(null)}
-                    >
-                      <span className="creative_link">
-                        <img src="/svg/down.svg" alt="" className="fn__svg" />
-                        Home
-                      </span>
-                    </a>
-                  </li>
-
-                  <li>
-                    <Link href="/">
-                      <a onClick={() => navigationToggle(false)}>
-                        <span className="creative_link">#1 3D Carousel</span>
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/index-2">
-                      <a onClick={() => navigationToggle(false)}>
-                        <span className="creative_link">
-                          #2 Bended Carousel
-                        </span>
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/index-3">
-                      <a onClick={() => navigationToggle(false)}>
-                        <span className="creative_link">
-                          #3 Video Background
-                        </span>
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/index-4">
-                      <a onClick={() => navigationToggle(false)}>
-                        <span className="creative_link">#4 Water Effect</span>
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/index-5">
-                      <a onClick={() => navigationToggle(false)}>
-                        <span className="creative_link">
-                          #5 Simple Carousel
-                        </span>
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/index-6">
-                      <a onClick={() => navigationToggle(false)}>
-                        <span className="creative_link">
-                          #6 Fullscreen Slider
-                        </span>
-                      </a>
-                    </Link>
-                  </li>
-                </ul>
               </li>
               <li>
                 <Link href="/nft/1">

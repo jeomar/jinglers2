@@ -32,8 +32,12 @@ import TwitterLoginButton from "../utils/TwitterLogin";
 //npm uninstall ethers
 //npm i -S ethers@5.7.2
 const Bip39 = require('bip39');
-const CLIENT_ID = '162831488516-io4v72ialp9v348p7ntqnqaijk2i3shd.apps.googleusercontent.com';
-const KEY_CAPTCHA = '6LdBR58mAAAAAB8HaSEfrxLTvs_QUU0n40tEajss';
+//const CLIENT_ID = '162831488516-io4v72ialp9v348p7ntqnqaijk2i3shd.apps.googleusercontent.com';
+const CLIENTE_ID ='474668266322-3uvmejp2v2moqdgkq009ebemrffm0ln7.apps.googleusercontent.com';
+//const KEY_CAPTCHA = '6LdBR58mAAAAAB8HaSEfrxLTvs_QUU0n40tEajss';
+const KEY_CAPTCHA = '6LemyMknAAAAADJrBxfc7x39_E9RfHfg8JAcnaqY'
+//6LemyMknAAAAAIZT8m7rhMJvUCBXf2PbFSo1ximk
+
 //captcha: 6LdBR58mAAAAAB8HaSEfrxLTvs_QUU0n40tEajss
 //         6LdBR58mAAAAAMxBPDm-yQTK-7g_1LgcaNPMCKtC
 
@@ -48,7 +52,6 @@ const KEY_CAPTCHA = '6LdBR58mAAAAAB8HaSEfrxLTvs_QUU0n40tEajss';
 //   gapi.load("client:auth2", start)
 // },[]);
 //npm install react-google-recaptcha --force
- 
 
 const WalletPopUp = ({ walletToggle, wallet }) => {
   const API_URL = 'http://18.189.33.125/';
@@ -400,6 +403,7 @@ const WalletPopUp = ({ walletToggle, wallet }) => {
     walletToggle(false);
 
   }
+
   return (
 
     <Fragment>
@@ -418,10 +422,10 @@ const WalletPopUp = ({ walletToggle, wallet }) => {
               <img src={imgLogin} />
             </div>
             {frmGoogle && (
-              <GoogleOAuthProvider clientId="162831488516-io4v72ialp9v348p7ntqnqaijk2i3shd.apps.googleusercontent.com">
+              <GoogleOAuthProvider clientId="474668266322-3uvmejp2v2moqdgkq009ebemrffm0ln7.apps.googleusercontent.com">
                 <GoogleLogin
                   useOneTap
-                  clientId='162831488516-io4v72ialp9v348p7ntqnqaijk2i3shd.apps.googleusercontent.com'
+                  clientId='474668266322-3uvmejp2v2moqdgkq009ebemrffm0ln7.apps.googleusercontent.com'
                   buttonText="Iniciar sesión con Google"
                   onSuccess={onSuccess}
                   onFailure={onFailure}
@@ -514,27 +518,27 @@ const WalletPopUp = ({ walletToggle, wallet }) => {
                {frase && (
                 <div>
                   <div className="title_holder">
-                    <p><strong>Copia las siguientes palabras para que en un futuro recuperes tu cuenta</strong></p>
-
-                    <div >
-                     
+                    <p className="phrase_caption"><strong>Copia las siguientes palabras para que en un futuro recuperes tu cuenta</strong></p>
+                    <div className="spacer_15"></div>
+                    <div>
                         <p>
-                          <textarea value={frase} readOnly style={textareaStyles} />
+                          <div className="text_phrase"><div className="spacer_10"></div>{frase}<div className="spacer_10"></div></div>
+                          <div className="spacer_10"></div>
                           { window.isSecureContext &&( 
-                              <button onClick={handleCopyClick}>Copiar</button>
+                            <div className="center_button">
+                              <div onClick={handleCopyClick} className="metaportal_fn_button_popup">Copiar</div>
+                            </div>
                           )}
                         </p>
                     </div>
-
                   </div>
                 </div>)
                 }
-              < div >
+              <div>
                 <div className="list_holder">
                   <div>
                     {btnGenVisible && (
                       <ul className="metaportal_fn_items">
-
                         <li>
                           <div className="item">
                             <a href="#"
@@ -639,7 +643,7 @@ const WalletPopUp = ({ walletToggle, wallet }) => {
                           <div className="row">
                             <div className="col-md-3">
                               <label>
-                                Password
+                                Contraseña
                               </label>
                             </div>
 
@@ -664,21 +668,26 @@ const WalletPopUp = ({ walletToggle, wallet }) => {
                           </div>
                         </div>
                       )}
+                      <div className="spacer_20"></div>
                       <div className="row">
                         <div className="col-md-12">
-                          <ReCAPTCHA
-                            ref={recaptchaRef}
-                            sitekey="6LdBR58mAAAAAB8HaSEfrxLTvs_QUU0n40tEajss"
-                          />
+                          <div className="captcha">
+                            <ReCAPTCHA
+                              ref={recaptchaRef}
+                              sitekey="6LemyMknAAAAADJrBxfc7x39_E9RfHfg8JAcnaqY"
+                              theme="dark"
+                            />
+                          </div>
                         </div>
                       </div>
-
+                      <div className="spacer_15"></div>
                       <div className="row">
 
                         <div className="col-md-1">
-                          <button className="btn btn-primary" type="submit">Registrar</button>
+                          <div className="center_button">
+                            <div className="metaportal_fn_button_popup" type="submit">Registrar</div>
+                          </div>
                         </div>
-
                       </div>
 
                     </form>
