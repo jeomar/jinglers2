@@ -71,7 +71,7 @@ const About = () => {
             <div className="desc">
               <p>
                 Create your jingler ID.
-                Let`&apos;`s do the basics, create your identity: 
+                Let's do the basics, create your identity: 
                             enter the data and your artistic name. 
                              Remember: protect your choir very well.
               </p>

@@ -69,7 +69,7 @@ const RoadMapSlider = () => {
                     <span className="phase">Phase 04</span>
                     <div className="item_in">
                       <p className="date">Q1 2024</p>
-                      <h3 className="title">let`&apos;`s start, good luck</h3>
+                      <h3 className="title">let's start, good luck</h3>
                       <p className="desc">
                       The first private sale for the winners of the Mixes tokens begins, 
                       good luck! check your jingle, you probably have a prize waiting. 
@@ -89,7 +89,7 @@ const RoadMapSlider = () => {
                       <p className="desc">
                       the second pre-sale and its random gifts are launched. 
                       We integrated the Create your shib option on the page. 
-                      it`&apos;`s time to vote and shape your own collection. 
+                      it's time to vote and shape your own collection. 
                       AI Integration for tools is done
                       </p>
                     </div>
@@ -104,7 +104,7 @@ const RoadMapSlider = () => {
                       <h3 className="title">The community expands and we open the doors to the world</h3>
                       <p className="desc">
                       If you were part of the start this is just the beginning! And if you are new, 
-                      don`&apos;`t miss the news, the contests, the gifts, participate and enjoy while you 
+                      don't miss the news, the contests, the gifts, participate and enjoy while you 
                       become part of the innovation in the audiovisual industry.
                       </p>
                     </div>
@@ -118,7 +118,7 @@ const RoadMapSlider = () => {
                       <p className="date">Q3 2024</p>
                       <h3 className="title">You are not customers, you are collectors and partners.</h3>
                       <p className="desc">
-                      That`&apos;`s right, all jinglers are partners, collectors and have different percentages 
+                      That's right, all jinglers are partners, collectors and have different percentages 
                       of profit throughout the growth of the project! Earnings for musical, youtube, CASINO royalties! 
                       and the different ways that the team will implement. 
                       Your rarity, the number of Jingles you have and your participation in the community will define your earnings.

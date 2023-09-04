@@ -90,7 +90,7 @@ const Contact = () => {
                       <img src="/svg/checked.svg" alt="" className="fn__svg" />
                     </span>
                     <p>
-                    I agree to receive emails of all the news in the jingler ecosystem so I don`&apos;`t miss any news.
+                    I agree to receive emails of all the news in the jingler ecosystem so I don't miss any news.
                     </p>
                   </label>
                   <div className="mw300">
